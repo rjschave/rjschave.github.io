@@ -33,8 +33,8 @@ Please note that wfastcgi.py will need to be copied into the project directory. 
     
 7.  Click Add Module Mapping (located in actions pane on the right side) and use the following settings:
 
-    Request Path: *
-    Module FastCgiModule
+    Request Path: *<br>
+    Module FastCgiModule    
     Executable: C:\Python27\python.exe|C:\inetpub\wwwroot\<project_name>\wfastcgi.py
     
     Adjust the Python path accordingly for Python 3.
@@ -67,7 +67,7 @@ Please note that wfastcgi.py will need to be copied into the project directory. 
     
     If you are using multiple setting files as recommended by Two Scoops of Django then your DJANGO_SETTINGS_MODULE variable may look like this: <project_name>.settings.production
     
-    PYTHONPATH: c:\inetpub\wwwroot\<project_name>
+    PYTHONPATH: c:\inetpub\wwwroot\<project_name>  
     WSGI_HANDLER: django.core.wsgi.get_wsgi_application()
     
     Additional Environment variables
@@ -88,7 +88,7 @@ You must configure IIS to host the static files.
 
 2.  Configure the following settings:
 
-    Alias - This will be the name specified for STATIC_URL in your project’s settings file
+    Alias - This will be the name specified for STATIC_URL in your project’s settings file.  
     Physical Path - This will be name specified for STATIC_ROOT in your project’s setting file.
 
 3. Click ok to close the Add Virtual Directory dialog box
@@ -111,5 +111,17 @@ You must configure IIS to host the media files.
 
 2.  Configure the following settings:
 
-    Alias - This will be the name specified for MEDIA_URL in your project’s settings file
+    Alias - This will be the name specified for MEDIA_URL in your project’s settings file.  
     Physical Path - This will be name specified for MEDIA_ROOT in your project’s setting file.
+    
+3. Click ok to close the Add Virtual Directory dialog box
+
+4. Select the newly created virtual directory
+
+5. Open Handler Mappings
+
+6. Click View Ordered List (located in actions pane on the right side) 
+
+7.  Select StaticFile and click Move Up until the entry is at the top of the list.  
+
+    Click Yes on the Handler Mappings warning dialog box informing you that changing made at the parent level will no longer be inherited at this level.
