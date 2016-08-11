@@ -6,4 +6,4 @@ permalink: /about/
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[ryan@eclipse-online.com](mailto:ryan@eclipse-online.com)
